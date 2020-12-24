@@ -1,0 +1,31 @@
+
+<div [style.top]="menuTop" 
+		 class="second-menu" 
+		 [ngClass]="setSecondMenuClass()">
+
+  <div *ngFor="let project of secondMenu"
+  			(click)="secondMenuClicked()">{{ project.name  }}</div>
+
+</div>
+
+<div #startMenu class="start-menu" [ngClass]="setStartMenuClass()">
+
+ 
+		<div class="menu-item" *ngFor="let obj of menuNames"
+				(click)="menuClicked(obj.name, obj.option)">
+					<mat-icon *ngIf="obj.icon">{{ obj.icon }}</mat-icon>
+			  	<span class="menu-name"> {{ obj.name | titlecase}}</span>
+			  	<mat-icon *ngIf="obj.option === 'more'">play_arrow</mat-icon>
+		</div>
+</div>
+
+
+<div class="taskbar">
+	<div class="start-btn" (click)="startClicked()">Start</div>	
+	<div class="date">
+			<div>{{ appTime }}</div>
+			<div>{{ appDate }}</div>
+	</div>
+</div>
+
+
