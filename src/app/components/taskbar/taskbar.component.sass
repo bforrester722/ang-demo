@@ -1,0 +1,71 @@
+$accent-color: #C4C4C4
+$shadow:       0 2px 2px 0 rgba(0, 0, 0, 0.58)
+
+.taskbar 
+  display: 					flex
+  justify-content:  space-between
+  position: 				absolute
+  bottom:   				0
+  left:     				0
+  right:    				0
+  height:   				42px
+  background-color: $accent-color
+
+
+.start-btn
+ display: 					flex
+ justify-content: 	center
+ align-items: 			center
+ height: 					 	100%
+ width: 					 	72px
+ background-color: 	white
+ box-shadow:       	$shadow
+
+.date 
+ display: 			 	flex
+ flex-direction: 	column
+ justify-content: center
+ padding: 				8px
+ text-align: 			center
+
+.start-menu 
+ opacity:   			 0
+ transform: 			 translateY(100%)
+ transition: 			 all .25s
+ width:            180px
+ background-color: whitesmoke
+ position:         absolute
+ bottom:           42px
+ left:             0
+ box-shadow:       	$shadow
+
+.open-menu 
+ transform: translateY(0)
+ opacity:  1
+
+.menu-item 
+ display: flex
+ align-items: center
+
+mat-icon 
+ padding-left: 8px
+ 
+.menu-name 
+ padding: 8px 
+
+.second-menu 
+ width:            180px
+ height:           216px
+ overflow-y:       scroll
+ opacity:   			 0
+ transform: 			 translateX(-10%)
+ transition: 			 all .25s
+ background-color: whitesmoke
+ position:         absolute
+ left:             180px
+ padding-left:		 8px
+ 
+
+.open-second 
+ transform: translateX(0)
+ opacity:  1
